@@ -1,16 +1,17 @@
 const { app, BrowserWindow } = require("electron");
-const url = require("url");
 
-function newApp() {
-  win = new BrowserWindow();
-  win.loadURL(
-    url.format({
-      pathname: "index.html",
-      slashes: true
-    })
-  );
-  console.log("hello world!")
+//vllt eher rust und tauri als electron wegen langer ladezeiten
 
+const createWindow = () => {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600
+  })
+
+  win.loadFile('index.html')
 }
 
-app.on("ready", newApp);
+
+app.whenReady().then(() => {
+  createWindow()
+})
