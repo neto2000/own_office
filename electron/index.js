@@ -9,6 +9,8 @@ function newApp() {
       slashes: true
     })
   );
+  console.log("hello world!")
+
 }
 
 app.on("ready", newApp);
