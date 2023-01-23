@@ -1,4 +1,4 @@
-# own_office
+# own_office (working title)
 an alternative for the Microsoft Office suite with auto correction
 
 ##
